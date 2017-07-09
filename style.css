@@ -1,11 +1,13 @@
 /* entire container, keeps perspective */
 .flip-container {
-    perspective: 1000px;
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
 }
 /*	 flip the pane when hovered */
 
 .flip-container:hover .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper{
-transform: rotateY(180deg);
+-webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg);
 }
 
 
@@ -20,35 +22,49 @@ transform: rotateY(180deg);
 
 /* flip speed goes here */
 .flipper {
+    -webkit-transition: 0.6s;
     transition: 0.6s;
-    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
 
     position: relative;
 }
 
 /* hide back of pane during swap */
 .front, .back {
-    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 /* front pane, placed above back */
 .front {
     z-index: 2;
     /* for firefox 31 */
-    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
 }
 
 /* back, initially hidden pane */
 .back {
     z-index: 10;
-    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
     position: relative;
     background: #dbeb86;
 }
@@ -58,7 +74,8 @@ transform: rotateY(180deg);
     position: absolute;
     bottom: 25px;
     left: 50%;
-    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
 }
 
 .descripcion, .titulo {
@@ -105,10 +122,19 @@ input{
 }
 
 .input{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .invisible {
@@ -116,9 +142,15 @@ input{
     height: 100%;
 }
 .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-top: 20px;
 }
 .divider {
