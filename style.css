@@ -90,6 +90,11 @@ img {
     width: 100%;
 }
 
+.front img{
+    width: 288px;
+    height: 413px;
+}
+
 .logo{
     width: auto;
     margin-bottom: 20px;
