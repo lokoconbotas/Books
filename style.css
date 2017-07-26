@@ -10,11 +10,6 @@
         transform: rotateY(180deg);
 }
 
-
-.flip-container.flip .flipper {
-/*    transform: rotateY(180deg);*/
-}
-
 .flip-container, .front, .back {
     width: 288px;
     height: 412.2px;
@@ -98,9 +93,6 @@ img {
 .logo{
     width: auto;
     margin-bottom: 20px;
-}
-
-.item {
 }
 
 .search{
