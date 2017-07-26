@@ -5,7 +5,6 @@ var qsRegex;
 function getJSON(){
 
     $.getJSON('https://api.myjson.com/bins/1ex6en', function(dataBooks){
-
         prepareIsotope();
         createGrid(dataBooks);
     });
