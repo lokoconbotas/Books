@@ -28,7 +28,7 @@ function prepareIsotope(){
     var $quicksearch = $('.quicksearch').keyup( debounce( function() {
         qsRegex = new RegExp( $quicksearch.val(), 'gi' );
         $grid.isotope();
-    }, 2000 ) );
+    }, 500 ) );
 
 }
 
